@@ -1,0 +1,3 @@
+aws s3 ls // Lists s3 repos 
+aws ec2 describe-instances // descrines EC2 instances
+aws sts get-session-token // provides an sts token
