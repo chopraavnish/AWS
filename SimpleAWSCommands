@@ -1,3 +1,31 @@
 aws s3 ls // Lists s3 repos 
 aws ec2 describe-instances // descrines EC2 instances
+
+STS --> Security Token Service
 aws sts get-session-token // provides an sts token
+aws sts get-caller-identify
+
+
+AWS Commands for Installing Agent Files: 
+
+// Get the installation file
+wget https://d1wk0tztpsntt1.cloudfront.net/linux/latest/install
+
+// run the install.
+sudo bash install
+
+// check if the agent is running
+sudo /opt/aws/awsagent/bin/awsagent status
+
+// Start and stop the agent: 
+sudo /etc/init.d/awsagent start
+sudo /etc/init.d/awsagent stop
+
+// INstalling the SSM Agent on a AWS Linux server: 
+sudo yum -y install https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+
+// Installing the CloudWatch Agent on a Linux server: 
+sudo yum install amazon-cloudwatch-agent
+
+// Installing the Cloudwatch Agent: 
+sudo yum -y install awslogs
